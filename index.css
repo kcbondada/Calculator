@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+.background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #ff7f50, #1e90ff, #ff6347, #ffa500);
+    background-size: 600% 600%;
+    animation: gradientAnimation 20s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.calculator{
+        background-color: black;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1;
+
+}
+.calculator form input{
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    font-size: large;
+    
+
+}
+form .display{
+   display: flex;
+   justify-content: flex-end;
+   margin: 20px 0;
+}
+form .display input{
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+ }
+ form input.equal{
+    width: 145px;
+ }
+ form input.btn:hover{
+    background-color: hsl(0,0%,40%);
+ }
+ form input.btn:active{
+    background-color: hsl(0,0%,50%);
+ }
+form input.operator{
+    background-color: hsl(35,100%,55%);
+ }
+ form input.operator:hover{
+    background-color: hsl(35,100%,65%);
+ }
+ form input.operator:active{
+    background-color: hsl(35,100%,75%);
+ }
+.bgAnimation{
+    position: absolute;
+    top :0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(20,1fr);
+    background: white;
+    filter: saturate(2);
+    overflow: hidden;
+
+}
+.colorBox{
+    z-index: 2;
+    filter: brightness(1.1);
+    transition: 2s ease;
+    position: relative;
+    margin : 2px;
+    background: white;
+
+}
+
+.colorBox:hover{
+    background: violet;
+    transition-duration: 0s;
+}
